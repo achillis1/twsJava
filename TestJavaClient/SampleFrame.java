@@ -36,6 +36,7 @@ class SampleFrame extends JFrame implements EWrapper {
 
     private EClientSocket   m_client = new EClientSocket( this);
     private IBTextPanel     m_tickers = new IBTextPanel("Market and Historical Data", false);
+	private IBTextPanel 	m_tickers_ding = new IBTextPanel("Ding test", false);
     private IBTextPanel     m_TWS = new IBTextPanel("TWS Server Responses", false);
     private IBTextPanel     m_errors = new IBTextPanel("Errors and Messages", false);
     private OrderDlg        m_orderDlg = new OrderDlg( this);
@@ -55,6 +56,7 @@ class SampleFrame extends JFrame implements EWrapper {
 
     SampleFrame() {
         JPanel scrollingWindowDisplayPanel = new JPanel( new GridLayout( 0, 1) );
+        //scrollingWindowDisplayPanel.add(m_tickers_ding);
         scrollingWindowDisplayPanel.add( m_tickers);
         scrollingWindowDisplayPanel.add( m_TWS);
         scrollingWindowDisplayPanel.add( m_errors);
